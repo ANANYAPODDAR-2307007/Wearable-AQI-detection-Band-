@@ -8,7 +8,7 @@ Environment Sensor: DHT11 (Temperature and Humidity)
 Display: 0.96" OLED Display (SSD1306)
 Power: Jumper wires and breadboard (for prototyping)
 
-Hardware Connections-
+#Hardware Connections-
 Power Distribution
 Breadboard +ve Rail: Connected to ESP32 3.3V
 Breadboard -ve Rail: Connected to ESP32 GND
@@ -25,16 +25,16 @@ DHT11 Data Pin: Connected to ESP32 GPIO 4
 OLED SCL: Connected to ESP32 GPIO 22
 OLED SDA: Connected to ESP32 GPIO 21
 
-Software Requirements-
+#Software Requirements-
 This project is developed using Arduino IDE 2.3.6. The following libraries and board packages must be installed:
 Library Manager:  U8g2 by Oliver: Used for monochrome LCD/OLED displays (supports SSD1306, SSD1309, etc.).
 DHT sensor library by Adafruit.
 
-Board Manager:
+#Board Manager:
 esp32 by Espressif Systems (Supports boards like LOLIN D32, ESP32 Dev Module, etc.).
 
 
-MORE INFO ABOUT THE PROJECT FOR THE COMPONENTS USED:--
+##MORE INFO ABOUT THE PROJECT FOR THE COMPONENTS USED:--
 1.The MQ-2 is excellent for detecting smoke and combustible gases like LPG and Butane. However, for a wearable, its main limitation is power consumption. The internal heating element requires significant current (approx. 150mA), which can drain a small wearable battery quickly. In a production version, I would consider a MEMS-based gas sensor for lower power consumption.
 
 2.The MQ-2 sensor requires a 5V supply to heat the internal sensing element to the required operating temperature. However, the analog output signal must be checked to ensure it doesn't exceed 3.3V to protect the ESP32 GPIO. If the output exceeds 3.3V, a voltage divider circuit should be used.
